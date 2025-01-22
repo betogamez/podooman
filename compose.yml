@@ -1,0 +1,7 @@
+services:
+  db-admin:
+    # Definir interface pgAdmin
+  db:
+    # Definir base de datos
+volumes:
+# Definición de volumenes persistentes
