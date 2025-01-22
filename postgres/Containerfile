@@ -1,4 +1,4 @@
-FROM registry.redhat.io/rhel9/s2i-core
+FROM registry.access.redhat.com/rhel9/s2i-core
 
 # Variables de ambiente requeridas por el contenedor
 
