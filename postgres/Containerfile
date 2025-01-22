@@ -11,11 +11,11 @@ RUN { yum -y module enable postgresql:16 || :; } && \
     rpm -V $INSTALL_PKGS && \
     postgres -V | grep -qe "$POSTGRESQL_VERSION\." && echo "Found VERSION $POSTGRESQL_VERSION" && \
     (yum -y reinstall tzdata || yum -y update tzdata ) && \
-    yum -y clean all --enablerepo='*' && \
-    localedef -f UTF-8 -i en_US en_US.UTF-8 && \
-    test "$(id postgres)" = "uid=26(postgres) gid=26(postgres) groups=26(postgres)" && \
-    mkdir -p /var/lib/pgsql/data && \
-    mkdir -p /run/postgresql && \
+    yum -y clean all --enablerepo='*' && 
+#    localedef -f UTF-8 -i en_US en_US.UTF-8 && \
+#    test "$(id postgres)" = "uid=26(postgres) gid=26(postgres) groups=26(postgres)" && \
+#    mkdir -p /var/lib/pgsql/data && \
+#    mkdir -p /run/postgresql && \
 #    /usr/libexec/fix-permissions /var/lib/pgsql /run/postgresql
 
 # Get prefix path and path to scripts rather than hard-code them in scripts
