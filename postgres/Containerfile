@@ -2,7 +2,7 @@ FROM registry.fedoraproject.org/f35/s2i-core
 
 # Variables de ambiente requeridas por el contenedor
 
-RUN { yum -y module enable postgresql:14 || :; } && \
+RUN { yum -y module enable postgresql:13 || :; } && \
     # INSTALL_PKGS="rsync tar gettext bind-utils nss_wrapper-libs postgresql-server postgresql-contrib" && \
     INSTALL_PKGS="rsync tar gettext bind-utils postgresql-server postgresql-contrib" && \
     INSTALL_PKGS="$INSTALL_PKGS pgaudit" && \
